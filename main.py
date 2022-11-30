@@ -6,10 +6,9 @@ async def on_startup(_):
     print('Бот запущен и это отражается в командной строке')
 
 
-from handlers import client, admin, other
+from handlers import callback_handler, message_handler
 
-client.register_client_handler(dp)
-# admin.
-other.register_other_handler(dp)
+callback_handler.register_callback_handler(dp)
+message_handler.register_message_handler(dp)
 
 executor.start_polling(dp, skip_updates=True, on_startup=on_startup)
