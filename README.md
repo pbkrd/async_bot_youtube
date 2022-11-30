@@ -1,1 +1,1 @@
-# youtube_tg_bot
+pip install -r requirements.txt
