@@ -1,28 +1,37 @@
-from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, KeyboardButton, \
+    ReplyKeyboardMarkup
 
 
-def get_kb_client_start():
-    b1 = KeyboardButton('/ref_на_pl_или_на_v_из_pl')
-    b2 = KeyboardButton('/ref_на_любое_v_из_ch')
-    kb_client = ReplyKeyboardMarkup(resize_keyboard=True)
-    kb_client.add(b1).add(b2)
-    return kb_client
+def get_kb_channel():
+    kb = InlineKeyboardMarkup(resize_keyboard=True)
+    b1 = InlineKeyboardButton('PLAYLISTS', callback_data='playlists')
+    b2 = InlineKeyboardButton('RESTART', callback_data='restart')
+    kb.add(b1).add(b2)
+    return kb
 
 
-def get_kb_menu_pls(s_dict):
+def get_kb_video():
+    kb = get_kb_channel()
+    b = InlineKeyboardButton('CHANNEL_info', callback_data='channel')
+    kb.add(b)
+    return kb
+
+
+def get_kb_playlist(video_inside):
+    kb = get_kb_video()
+    # Поискать метод insert
+    if video_inside:
+        b = InlineKeyboardButton('VIDEO_info', callback_data='video')
+        kb.add(b)
+    return kb
+
+
+def get_kb_menu_playlists(s_dict):
     titles_pls = tuple(s_dict)
     buttons = [KeyboardButton(title) for title in titles_pls]
-    button_stop = KeyboardButton('/отмена')
+    button_stop = KeyboardButton('/restart')
     kb_client = ReplyKeyboardMarkup(resize_keyboard=True)
     kb_client.add(button_stop)
     [kb_client.add(button) for button in buttons]
     kb_client.add(button_stop)
-    return kb_client
-
-
-def get_kb_yes_or_no():
-    b1 = KeyboardButton('/ДА')
-    b2 = KeyboardButton('/НЕТ')
-    kb_client = ReplyKeyboardMarkup()
-    kb_client.row(b1, b2)
     return kb_client
