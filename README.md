@@ -14,8 +14,7 @@ Windows:
 >Редактировать bot_run.bat
     
     nano bot_run.bat images/edit bot_run.bat.jpg
-    
-![Alt-текст](https://github.com/pbkrd/async_bot_youtube/blob/b6bf3f86a87eb2dafdacebb3f930a8456b9e2c53/images/edit%20bot_run.bat.jpg "edit_bot_run.bat")
+     "edit_bot_run.bat")
 
 >Создать тестовое окружение:
 
