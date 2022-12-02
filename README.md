@@ -13,9 +13,11 @@ Setup:
 Windows:
 >Редактировать bot_run.bat
     
-    nano bot_run.bat
+    nano bot_run.bat images/edit bot_run.bat.jpg
     
-    ![Alt-текст](https://avatars1.githubusercontent.com/u/5384215?v=3&s=460 "Картинка")
+    ![Alt-текст](https://github.com/pbkrd/async_bot_youtube/blob/b6bf3f86a87eb2dafdacebb3f930a8456b9e2c53/images/edit%20bot_run.bat.jpg "Картинка")
+    
+    ![Alt-текст]([https://github.com/pbkrd/async_bot_youtube/blob/b6bf3f86a87eb2dafdacebb3f930a8456b9e2c53/images/edit%20bot_run.bat.jpg](https://github.com/pbkrd/async_bot_youtube/blob/main/images/edit%20bot_run.bat.jpg) "Картинка")
 
 >Создать тестовое окружение:
 
