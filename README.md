@@ -11,17 +11,15 @@ About
 Setup:
 -------------------------
 Windows:
->Редактировать bot_run.bat
-    
-    nano bot_run.bat images/edit bot_run.bat.jpg
-     "edit_bot_run.bat")
-
 >Создать тестовое окружение:
 
     python -m venv venv
->Активировать его:
+>Редактировать bot_run.bat
+    
+    nano bot_run.bat images/edit bot_run.bat.jpg
+    
+![Alt-текст](https://github.com/pbkrd/async_bot_youtube/blob/8cbb9f489a8c16fe2281414d3c49d3b9a4df8556/images/edit%20bot_run.bat.jpg "editing_bot_run.bat")
 
-    source venv/bin/activate
 >Установить зависимости:
 
     pip install -r requirements.txt
