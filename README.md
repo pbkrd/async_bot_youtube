@@ -26,7 +26,7 @@ Windows:
     pip install -r requirements.txt
 >Запустить скрипт:
 
-    bot_run.bat
+    start bot_run.bat
 ___
 Features
 -------------------------
